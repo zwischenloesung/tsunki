@@ -65,7 +65,10 @@ properties:
   _references:
     type: "array"
     items:
-      type: "string"
+      name:
+        type: "string"
+      uri:
+        type: "string"
 
 requried:
   - "id"
