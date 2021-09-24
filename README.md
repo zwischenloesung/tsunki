@@ -31,19 +31,23 @@ wisdom, just on request.
 Tsunki is composed of the following elements.
 
 
-### Tsunki-Thing
+### Tsentsak / Tsunki-Thing
 
-Everything in Tsunki is first of all, a tsunki-thing. A tsunki thing is
+Everything - literally EVERY abstract or concrete thing - you can
+think of is represented (or at least: representable) in Tsunki by
+simply pointing to it. Let's call a represented thing a tsunki-thing
+(yes, we could just stick with 'thing', but for the sake of clarity,
+we try to be explicit here), and the pointer a tsentsak (dart).
+Such a tsentsak takes the form of
 a YAML-document containing information about the thing to be described.
-It basically is a pointer to the actual thing, enriched with some meta data
-about its target it is pointing at.
+It is enriched with some meta data about its target.
 
 
 ### Targets
 
 Both abstract and concrete things can be managed by either using the
-'target' parameter in the YAML-document, aka 'tsunki-thing', referencing
-a list of URIs pointing to concrete things in spacetime or by leaving it
+'target' parameter in the YAML-document, referencing a list of
+URIs pointing to concrete things in spacetime or by leaving it
 empty, thus "pointing to an idea in the void".
 
 
