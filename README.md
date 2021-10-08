@@ -37,9 +37,9 @@ Everything - literally EVERY abstract or concrete thing - you can
 think of is represented (or at least: representable) in Tsunki by
 simply pointing to it. Let's call a represented thing a tsunki-thing
 (yes, we could just stick with 'thing', but for the sake of clarity,
-we try to be explicit here), and the pointer a tsentsak (dart).
+we try to be explicit here), and the pointer, or handle, a tsentsak (dart).
 Such a tsentsak takes the form of
-a YAML-document containing information about the thing to be described.
+a JSON/YAML-document containing information about the thing to be described.
 It is enriched with some meta data about its target.
 
 
@@ -71,12 +71,11 @@ A tsunki-thing exists in a tsunki-context. Usually this is a versioning
 system repository.
 
 
-### Tsunki-Facet
+### Tsunki-View
 
 When editing or creating content, the focus mostly lies on a certain thing.
 If information is about to be consumed though, the focus lies often on
 certain aspects of things, so the data should be filtered and presented
-in a view, corresponding to the question asked. This is called a
-tsunki-facet here.
+in a view, corresponding to the question asked.
 
 
