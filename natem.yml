@@ -1,0 +1,43 @@
+#TSENTSAK-0.1
+# The tool to access the tsunki-universe
+---
+targets:
+
+id: "urn:uuid:7140eb19-dab5-4779-bb3d-52a755bacb2b"
+
+names:
+  - "tag:mic@inofix.ch,2021:natem"
+  - "https://gitlab.com/zwischenloesung/tsunki/-/raw/master/natem.yml"
+  - "https://raw.githubusercontent.com/zwischenloesung/tsunki/master/natem.yml"
+
+property:
+  name:
+    en: "Tsunki-Natem"
+  alias:
+    en:
+      - "Natem"
+  description:
+    short:
+      en: "A tool to access the tsunki-universe"
+    long:
+      en: |
+        With the help of Natem, the user is able to access the information stored
+        in the knowledge base. Natem provides Views to filter and structure the
+        information expected.
+
+_type:
+  name: "tsunki_natem"
+  version: "0.1"
+  schema: "https://gitlab.com/zwischenloesung/tsunki/-/raw/master/schema/tsunki_thing_schema-0.1.yml?inline=false"
+
+_version: "0.1"
+
+_dependencies:
+
+_authors:
+  - name: "Michael Lustenberger"
+    uri: "mailto:mic@inofix.ch"
+
+_references:
+  - "https://github.com/zwischenloesung/tsunki/"
+  - "https://gitlab.com/zwischenloesung/tsunki"

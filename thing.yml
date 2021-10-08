@@ -1,0 +1,43 @@
+#TSENTSAK-0.1
+# The most basic kind of tsunki-thing
+---
+targets:
+
+id: "urn:uuid:aa189611-f828-47b6-b346-05c0951f6ce0"
+
+names:
+  - "tag:mic@inofix.ch,2021:thing"
+  - "https://gitlab.com/zwischenloesung/tsunki/-/raw/master/thing.yml"
+  - "https://raw.githubusercontent.com/zwischenloesung/tsunki/master/thing.yml"
+
+property:
+  name:
+    en: "Tsunki-Thing"
+  alias:
+    en:
+      - "Thing"
+  description:
+    short:
+      en: "An object, beeing or entity"
+    long:
+      en: |
+        A Tsunki-Thing is the most general kind of thing information is gathered
+        about in the knowledgebase and any document in the context of this
+        knowledgebase system is itself pointing to a Tsunki-Thing.
+
+_type:
+  name: "tsunki_thing"
+  version: "0.1"
+  schema: "https://gitlab.com/zwischenloesung/tsunki/-/raw/master/schema/tsunki_thing_schema-0.1.yml?inline=false"
+
+_version: "0.1"
+
+_dependencies:
+
+_authors:
+  - name: "Michael Lustenberger"
+    uri: "mailto:mic@inofix.ch"
+
+_references:
+  - "https://github.com/zwischenloesung/tsunki/"
+  - "https://gitlab.com/zwischenloesung/tsunki"

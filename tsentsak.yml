@@ -1,0 +1,40 @@
+#TSENTSAK-0.1
+# The pointer to a tsunki-thing
+---
+targets:
+
+id: "urn:uuid:47e76438-5fd3-453b-9ff5-efebffcbd698"
+
+names:
+  - "tag:mic@inofix.ch,2021:tsentsak"
+  - "https://gitlab.com/zwischenloesung/tsunki/-/raw/master/tsentsak.yml"
+  - "https://raw.githubusercontent.com/zwischenloesung/tsunki/master/tsentsak.yml"
+
+property:
+  name:
+    en: "Tsunki-Tsentsak"
+  description:
+    short:
+      en: "A pointer to a tsunki-thing (object, beeing or entity)."
+    long:
+      en: |
+        A Tsentsak is a pointer to a thing. Any Tsunki-document in the context of
+        this knowledgebase system is itself a Tsentsak (of type) but named after
+        the Thing it points to.
+
+_type:
+  name: "tsunki_tsentsak"
+  version: "0.1"
+  schema: "https://gitlab.com/zwischenloesung/tsunki/-/raw/master/schema/tsunki_thing_schema-0.1.yml?inline=false"
+
+_version: "0.1"
+
+_dependencies:
+
+_authors:
+  - name: "Michael Lustenberger"
+    uri: "mailto:mic@inofix.ch"
+
+_references:
+  - "https://github.com/zwischenloesung/tsunki/"
+  - "https://gitlab.com/zwischenloesung/tsunki"

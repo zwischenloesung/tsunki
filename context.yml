@@ -1,0 +1,42 @@
+#TSENTSAK-0.1
+# The current repository
+---
+targets:
+
+id: "urn:uuid:e8e0adfd-18ff-47cc-827b-333dd4be3774"
+
+names:
+  - "tag:mic@inofix.ch,2021:context"
+  - "https://gitlab.com/zwischenloesung/tsunki/-/raw/master/context.yml"
+  - "https://raw.githubusercontent.com/zwischenloesung/tsunki/master/context.yml"
+
+property:
+  name:
+    en: "Tsunki-Context"
+  alias:
+    en:
+      - "Context"
+  description:
+    short:
+      en: "A certain collection of tsentsak"
+    long:
+      en: |
+        A Tsunki-Context is a certain collection of Tsentsak, e.g. a repository
+        storing all the meta information about the things in question.
+
+_type:
+  name: "tsunki_context"
+  version: "0.1"
+  schema: "https://gitlab.com/zwischenloesung/tsunki/-/raw/master/schema/tsunki_thing_schema-0.1.yml?inline=false"
+
+_version: "0.1"
+
+_dependencies:
+
+_authors:
+  - name: "Michael Lustenberger"
+    uri: "mailto:mic@inofix.ch"
+
+_references:
+  - "https://github.com/zwischenloesung/tsunki/"
+  - "https://gitlab.com/zwischenloesung/tsunki"

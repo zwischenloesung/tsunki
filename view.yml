@@ -1,0 +1,43 @@
+#TSENTSAK-0.1
+# The view on the information seen from a certain perspective.
+---
+targets:
+
+id: "urn:uuid:0032ecc8-4213-435c-94db-35d3693eba43"
+
+names:
+  - "tag:mic@inofix.ch,2021:view"
+  - "https://gitlab.com/zwischenloesung/tsunki/-/raw/master/view.yml"
+  - "https://raw.githubusercontent.com/zwischenloesung/tsunki/master/view.yml"
+
+property:
+  name:
+    en: "Tsunki-View"
+  alias:
+    en:
+      - "View"
+  description:
+    short:
+      en: "The view on the information seen from a certain perspective"
+    long:
+      en: |
+        The information stored in a set of Tsentsak-files can get quite complex.
+        With the help of Natem the user can choose what perspective to take and
+        gets the respective View in order to focus on the relevant details.
+
+_type:
+  name: "tsunki_view"
+  version: "0.1"
+  schema: "https://gitlab.com/zwischenloesung/tsunki/-/raw/master/schema/tsunki_thing_schema-0.1.yml?inline=false"
+
+_version: "0.1"
+
+_dependencies:
+
+_authors:
+  - name: "Michael Lustenberger"
+    uri: "mailto:mic@inofix.ch"
+
+_references:
+  - "https://github.com/zwischenloesung/tsunki/"
+  - "https://gitlab.com/zwischenloesung/tsunki"

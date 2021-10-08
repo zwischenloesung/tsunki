@@ -1,0 +1,44 @@
+#TSENTSAK-0.1
+# The tsunki universe - a knowledge-base-system
+---
+targets:
+
+id: "urn:uuid:349becf1-8c92-46d5-a2d6-0b89ec2a0f24"
+
+names:
+  - "tag:mic@inofix.ch,2021:tsunki"
+  - "https://gitlab.com/zwischenloesung/tsunki/-/raw/master/tsunki.yml"
+  - "https://raw.githubusercontent.com/zwischenloesung/tsunki/master/tsunki.yml"
+
+property:
+  name:
+    en: "Tsunki Knowledge Base"
+  alias:
+    en:
+      - "Tsunki"
+  description:
+    short:
+      en: "A knowledge base system"
+    long:
+      en: |
+        Tsunki Knowledge-Base-System is a way to organize thoughts.
+        Any collection of documents following a certain pattern (see tsentak,
+        resp. thing) forms such a knowledge base and such collections can
+        also be combined by reference.
+
+_type:
+  name: "tsunki"
+  version: "0.1"
+  schema: "https://gitlab.com/zwischenloesung/tsunki/-/raw/master/schema/tsunki_thing_schema-0.1.yml?inline=false"
+
+_version: "0.1"
+
+_dependencies:
+
+_authors:
+  - name: "Michael Lustenberger"
+    uri: "mailto:mic@inofix.ch"
+
+_references:
+  - "https://github.com/zwischenloesung/tsunki/"
+  - "https://gitlab.com/zwischenloesung/tsunki"
