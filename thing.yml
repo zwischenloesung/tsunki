@@ -3,14 +3,18 @@
 ---
 targets:
 
-id: "urn:uuid:aa189611-f828-47b6-b346-05c0951f6ce0"
+id:
+  uuid: "urn:uuid:aa189611-f828-47b6-b346-05c0951f6ce0"
+  version: "0.1"
+  name: ""
+  url:
+    - "https://gitlab.com/zwischenloesung/tsunki/-/raw/master/thing.yml"
+    - "https://raw.githubusercontent.com/zwischenloesung/tsunki/master/thing.yml"
 
-names:
-  - "tag:mic@inofix.ch,2021:thing"
-  - "https://gitlab.com/zwischenloesung/tsunki/-/raw/master/thing.yml"
-  - "https://raw.githubusercontent.com/zwischenloesung/tsunki/master/thing.yml"
+relation:
+behavior:
 
-property:
+parameter:
   name:
     en: "Tsunki-Thing"
   alias:
@@ -24,20 +28,21 @@ property:
         A Tsunki-Thing is the most general kind of thing information is gathered
         about in the knowledgebase and any document in the context of this
         knowledgebase system is itself pointing to a Tsunki-Thing.
+  tags:
+    - "tag:mic@inofix.ch,2021:thing"
 
-_type:
-  name: "tsunki_thing"
-  version: "0.1"
-  schema: "https://gitlab.com/zwischenloesung/tsunki/-/raw/master/schema/tsunki_thing_schema-0.1.yml?inline=false"
+schema:
+  - name: "tsunki_thing"
+    version: "0.1"
+    url: "https://gitlab.com/zwischenloesung/tsunki/-/raw/master/schema/tsunki_thing_schema-0.1.yml?inline=false"
 
-_version: "0.1"
+permissions:
 
-_dependencies:
-
-_authors:
-  - name: "Michael Lustenberger"
-    uri: "mailto:mic@inofix.ch"
-
-_references:
-  - "https://github.com/zwischenloesung/tsunki/"
-  - "https://gitlab.com/zwischenloesung/tsunki"
+attribution:
+  author:
+    - name: "Michael Lustenberger"
+      uri: "mailto:mic@inofix.ch"
+      date: "2021-11-09" #iso-8601
+  reference:
+    - uri: "https://github.com/zwischenloesung/tsunki/"
+    - uri: "https://gitlab.com/zwischenloesung/tsunki"

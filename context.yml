@@ -1,16 +1,9 @@
-#TSENTSAK-0.1
+#TSENTSAK-0.2
 # The current repository
 ---
-targets:
+target:
 
-id: "urn:uuid:e8e0adfd-18ff-47cc-827b-333dd4be3774"
-
-names:
-  - "tag:mic@inofix.ch,2021:context"
-  - "https://gitlab.com/zwischenloesung/tsunki/-/raw/master/context.yml"
-  - "https://raw.githubusercontent.com/zwischenloesung/tsunki/master/context.yml"
-
-property:
+parameter:
   name:
     en: "Tsunki-Context"
   alias:
@@ -24,19 +17,33 @@ property:
         A Tsunki-Context is a certain collection of Tsentsak, e.g. a repository
         storing all the meta information about the things in question.
 
-_type:
-  name: "tsunki_context"
-  version: "0.1"
-  schema: "https://gitlab.com/zwischenloesung/tsunki/-/raw/master/schema/tsunki_thing_schema-0.1.yml?inline=false"
+id:
+  uuid: "urn:uuid:e8e0adfd-18ff-47cc-827b-333dd4be3774"
+#  name: # implicitly set to "context" as it is locally found at "$CONTEXT_PATH/context"
+#  alias:
+#    - "tag:mic@inofix.ch,2021:context"
+  url:
+    - "https://gitlab.com/zwischenloesung/tsunki/-/raw/master/context.yml"
+    - "https://raw.githubusercontent.com/zwischenloesung/tsunki/master/context.yml"
+  version: ""
 
-_version: "0.1"
+behavior:
+  #context: "" #needed to point to the root of this repo in case it is not clear (for both man and machine) by the context it is used in.
+  extend: #needed in case external contexts are to be imported first
 
-_dependencies:
+schema:
+  - name: "tsunki_context"
+    version: "0.1"
+    url: "https://gitlab.com/zwischenloesung/tsunki/-/raw/master/schema/tsunki_thing_schema-0.1.yml?inline=false"
 
-_authors:
-  - name: "Michael Lustenberger"
-    uri: "mailto:mic@inofix.ch"
+attribution:
+  author:
+    - name: "Michael Lustenberger"
+      uri: "mailto:mic@inofix.ch"
+  reference:
+    - name: ""
+      url: "https://github.com/zwischenloesung/tsunki/"
+    - name: ""
+      url: "https://gitlab.com/zwischenloesung/tsunki"
 
-_references:
-  - "https://github.com/zwischenloesung/tsunki/"
-  - "https://gitlab.com/zwischenloesung/tsunki"
+permission:

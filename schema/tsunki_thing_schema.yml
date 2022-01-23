@@ -13,65 +13,227 @@ description: |
 type: "object"
 
 properties:
-  targets:
-    type: [ "array", "null" ]
-  id:
-    type: "string"
-  alias:
+  configuration:
+    type: [ "object", "null" ]
+  target:
     type: [ "array", "null" ]
     items:
-      type: "string"
-  urls:
-    type: [ "array", "null" ]
-    items:
-      type: "string"
+      type: "object"
+      properties:
+        url:
+          type: [ "string", "null" ]
+        checksum:
+          type: [ "string", "null" ]
+        tag:
+          type: [ "string", "null" ]
+        timestamp:
+          type: [ "string", "object", "null" ]
+          properties:
+            start:
+              type: [ "string", "null" ]
+            end:
+              type: [ "string", "null" ]
+          additionalProperties: false
+        geotag:
+          type: [ "string", "null" ]
+      additionalProperties: false
   relation:
-    type: "object"
-    patternProperties:
-      .*:
+    type: [ "object", "null" ]
+    additionalProperties: true
+    properties:
+      be:
         type: [ "array", "null" ]
         items:
           type: "string"
-  module:
-    type: [ "array", "null" ]
-    items:
+      have:
+        type: [ "array", "null" ]
+        items:
+          type: "string"
+      know:
+        type: [ "array", "null" ]
+        items:
+          type: "string"
+  behavior:
+    type: [ "object", "null" ]
+    additionalProperties: true
+    properties:
+      use:
+        type: [ "array", "null" ]
+      do:
+        type: [ "array", "null" ]
+        items:
+          type: [ "object", "null" ]
+          additionalProperties: false
+          properties:
+            condition:
+              type: [ "array", "null" ]
+              items:
+                type: "string"
+            environment:
+              type: "string"
+            dependency:
+              type: [ "array", "null" ]
+              items:
+                type: "object"
+                properties:
+                  name:
+                    type: "string"
+                  url:
+                    type: "string"
+                  version:
+                    type: "string"
+            run:
+              type: [ "array", "null" ]
+              items:
+                type: "object"
+                properties:
+                  command:
+                    type: "string"
+                  option:
+                    type: [ "array", "null" ]
+                    items:
+                      type: "string"
+      show:
+        type: [ "array", "null" ]
+      include:
+        type: [ "array", "null" ]
+        items:
+          type: "object"
+          properties:
+            name:
+              type: "string"
+            url:
+              type: "string"
+            version:
+              type: "string"
+      extend:
+        type: [ "array", "null" ]
+        items:
+          type: "object"
+          properties:
+            name:
+              type: "string"
+            url:
+              type: "string"
+            version:
+              type: "string"
+  parameter:
+    type: [ "object", "null" ]
+    properties:
       name:
-        type: "string"
-      url:
-        type: "string"
-  property:
-    type: "object"
-  _type:
+        type: [ "object", "null" ]
+        patternProperties:
+          default:
+            type: "string"
+          "^[a-z][a-z]$": # language codes
+            type: "string"
+          "^[a-z][a-z]_[A-Z][A-Z]$": # language codes
+            type: "string"
+        additionalProperties: false
+      description:
+        type: [ "object", "null" ]
+        properties:
+          short:
+            type: "object"
+            patternProperties:
+              default:
+                type: "string"
+              "^[a-z][a-z]$":
+                type: "string"
+              "^[a-z][a-z]_[A-Z][A-Z]$":
+                type: "string"
+            additionalProperties: false
+          long:
+            type: "object"
+            patternProperties:
+              default:
+                type: "string"
+              "^[a-z][a-z]$":
+                type: "string"
+              "^[a-z][a-z]_[A-Z][A-Z]$":
+                type: "string"
+            additionalProperties: false
+    additionalProperties: true
+#    patternProperties:
+#      ".*":
+#        type: [ "object", "array", "string", "null" ]
+  id:
     type: "object"
     properties:
+      uuid:
+        type: "string"
       name:
         type: "string"
       version:
         type: "string"
-      schema:
-        type: "string"
-  _version:
-    type: [ "string", "null" ]
-  _dependencies:
+      url:
+        type: [ "array", "null" ]
+        items:
+          type: "string"
+    additionalProperties: false
+
+  schema:
     type: [ "array", "null" ]
     items:
-      type: "string"
-  _authors:
-    type: "array"
-    items:
-      name:
-        type: "string"
-      uri:
-        type: "string"
-  _references:
-    type: "array"
-    items:
-      name:
-        type: "string"
-      uri:
-        type: "string"
+      type: "object"
+      properties:
+        name:
+          type: "string"
+        url:
+          type: "string"
+        version:
+          type: "string"
+      additionalProperties: false
 
-requried:
-  - "id"
-  - "targets"
+  attribution:
+    type: [ "object", "null" ]
+    properties:
+      author:
+        type: [ "array", "null" ]
+        items:
+          type: "object"
+          properties:
+            name:
+              type: "string"
+            url:
+              type: "string"
+            date:
+              type: "string"
+            geo:
+              type: "string"
+      reference:
+        type: [ "array", "null" ]
+        items:
+          type: "object"
+          properties:
+            name:
+              type: "string"
+            url:
+              type: "string"
+            date:
+              type: "string"
+            geo:
+              type: "string"
+    additionalProperties: false
+
+  permission:
+    type: [ "object", "null" ]
+    properties:
+      owner:
+        type: "string"
+      editor:
+        type: [ "array", "null" ]
+        items:
+          type: "string"
+      consumer:
+        type: [ "array", "null" ]
+        items:
+          type: "string"
+    required:
+      - "owner"
+    additionalProperties: true
+
+#requried: # nothing is really required, as all mandatory things might be autogenerated/inherited
+#  - "id"
+#  - "targets"
 

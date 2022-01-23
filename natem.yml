@@ -3,14 +3,16 @@
 ---
 targets:
 
-id: "urn:uuid:7140eb19-dab5-4779-bb3d-52a755bacb2b"
+id:
+  uuid: "urn:uuid:7140eb19-dab5-4779-bb3d-52a755bacb2b"
+#  alias:
+#    - "tag:mic@inofix.ch,2021:natem"
+  url:
+    - "https://gitlab.com/zwischenloesung/tsunki/-/raw/master/natem.yml"
+    - "https://raw.githubusercontent.com/zwischenloesung/tsunki/master/natem.yml"
+  version: "0.1"
 
-names:
-  - "tag:mic@inofix.ch,2021:natem"
-  - "https://gitlab.com/zwischenloesung/tsunki/-/raw/master/natem.yml"
-  - "https://raw.githubusercontent.com/zwischenloesung/tsunki/master/natem.yml"
-
-property:
+parameter:
   name:
     en: "Tsunki-Natem"
   alias:
@@ -25,19 +27,15 @@ property:
         in the knowledge base. Natem provides Views to filter and structure the
         information expected.
 
-_type:
-  name: "tsunki_natem"
-  version: "0.1"
-  schema: "https://gitlab.com/zwischenloesung/tsunki/-/raw/master/schema/tsunki_thing_schema-0.1.yml?inline=false"
+schema:
+  - name: "tsunki_natem"
+    version: "0.1"
+    url: "https://gitlab.com/zwischenloesung/tsunki/-/raw/master/schema/tsunki_thing_schema-0.1.yml?inline=false"
 
-_version: "0.1"
-
-_dependencies:
-
-_authors:
-  - name: "Michael Lustenberger"
-    uri: "mailto:mic@inofix.ch"
-
-_references:
-  - "https://github.com/zwischenloesung/tsunki/"
-  - "https://gitlab.com/zwischenloesung/tsunki"
+attribution:
+  author:
+    - name: "Michael Lustenberger"
+      uri: "mailto:mic@inofix.ch"
+  reference:
+    - url: "https://github.com/zwischenloesung/tsunki/"
+    - url: "https://gitlab.com/zwischenloesung/tsunki"

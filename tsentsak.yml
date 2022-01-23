@@ -3,14 +3,15 @@
 ---
 targets:
 
-id: "urn:uuid:47e76438-5fd3-453b-9ff5-efebffcbd698"
+id:
+  uuid: "urn:uuid:47e76438-5fd3-453b-9ff5-efebffcbd698"
+  url:
+    - "tag:mic@inofix.ch,2021:tsentsak"
+    - "https://gitlab.com/zwischenloesung/tsunki/-/raw/master/tsentsak.yml"
+    - "https://raw.githubusercontent.com/zwischenloesung/tsunki/master/tsentsak.yml"
+  version: "0.1"
 
-names:
-  - "tag:mic@inofix.ch,2021:tsentsak"
-  - "https://gitlab.com/zwischenloesung/tsunki/-/raw/master/tsentsak.yml"
-  - "https://raw.githubusercontent.com/zwischenloesung/tsunki/master/tsentsak.yml"
-
-property:
+parameter:
   name:
     en: "Tsunki-Tsentsak"
   description:
@@ -22,19 +23,15 @@ property:
         this knowledgebase system is itself a Tsentsak (of type) but named after
         the Thing it points to.
 
-_type:
-  name: "tsunki_tsentsak"
-  version: "0.1"
-  schema: "https://gitlab.com/zwischenloesung/tsunki/-/raw/master/schema/tsunki_thing_schema-0.1.yml?inline=false"
+schema:
+  - name: "tsunki_tsentsak"
+    version: "0.1"
+    url: "https://gitlab.com/zwischenloesung/tsunki/-/raw/master/schema/tsunki_thing_schema-0.1.yml?inline=false"
 
-_version: "0.1"
-
-_dependencies:
-
-_authors:
-  - name: "Michael Lustenberger"
-    uri: "mailto:mic@inofix.ch"
-
-_references:
-  - "https://github.com/zwischenloesung/tsunki/"
-  - "https://gitlab.com/zwischenloesung/tsunki"
+attribution:
+  author:
+    - name: "Michael Lustenberger"
+      uri: "mailto:mic@inofix.ch"
+  reference:
+    - url: "https://github.com/zwischenloesung/tsunki/"
+    - url: "https://gitlab.com/zwischenloesung/tsunki"
