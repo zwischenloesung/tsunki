@@ -24,35 +24,30 @@ properties:
           type: [ "string", "null" ]
         checksum:
           type: [ "string", "null" ]
+        uuid:
+          type: [ "string", "null" ]
         tag:
           type: [ "string", "null" ]
-        timestamp:
-          type: [ "string", "object", "null" ]
-          properties:
-            start:
-              type: [ "string", "null" ]
-            end:
-              type: [ "string", "null" ]
-          additionalProperties: false
+        date:
+          type: [ "string", "null" ]
         geotag:
           type: [ "string", "null" ]
       additionalProperties: false
   relation:
-    type: [ "object", "null" ]
-    additionalProperties: true
-    properties:
-      be:
-        type: [ "array", "null" ]
-        items:
-          type: "string"
-      have:
-        type: [ "array", "null" ]
-        items:
-          type: "string"
-      know:
-        type: [ "array", "null" ]
-        items:
-          type: "string"
+    type: [ "array", "null" ]
+    items:
+      type: "object"
+      properties:
+        properties:
+          name:
+            type: "string"
+          kind:
+            type: "string"
+          version:
+            type: "string"
+          priority:
+            type: "string"
+      additionalProperties: true
   behavior:
     type: [ "object", "null" ]
     additionalProperties: true
@@ -185,7 +180,7 @@ properties:
           type: "string"
       additionalProperties: false
 
-  attribution:
+  legal:
     type: [ "object", "null" ]
     properties:
       author:
@@ -193,6 +188,8 @@ properties:
         items:
           type: "object"
           properties:
+            target:
+              type: "boolean"
             name:
               type: "string"
             url:
@@ -206,6 +203,23 @@ properties:
         items:
           type: "object"
           properties:
+            target:
+              type: "boolean"
+            name:
+              type: "string"
+            url:
+              type: "string"
+            date:
+              type: "string"
+            geo:
+              type: "string"
+      license:
+        type: [ "array", "null" ]
+        items:
+          type: "object"
+          properties:
+            target:
+              type: "boolean"
             name:
               type: "string"
             url:
